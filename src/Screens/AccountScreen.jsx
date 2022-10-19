@@ -1,13 +1,13 @@
 import React from 'react';
 
-const FavorisScreen = () => {
+const AccountScreen = () => {
     return (
         <div>
             <h1>
-                Favoris
+                Account
             </h1>
         </div>
     );
 };
 
-export default FavorisScreen;
+export default AccountScreen;
