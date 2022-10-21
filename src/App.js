@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+import HomeScreen from './screens/HomeScreen';
+import ArtistScreen from './screens/ArtistScreen';
+import ThemeScreen from './screens/ThemeScreen';
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+
 
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container container-fluid">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/artist" element={<ArtistScreen />} />
+          <Route path="/theme" element={<ThemeScreen/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
